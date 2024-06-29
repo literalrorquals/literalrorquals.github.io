@@ -1,0 +1,143 @@
+/* styles.css */
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+    text-align: center;
+}
+
+header {
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure header stays above other content */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+main {
+    flex: 1;
+    padding-top: 100px; /* Ensure space for fixed header */
+    padding-bottom: 60px; /* Ensure space for footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+#hero p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+#hero a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+#hero a:hover {
+    background-color: #555;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+    position: relative; /* Change position to relative */
+    bottom: 0;
+    z-index: 1000; /* Ensure footer stays above other content */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    margin-bottom: 20px;
+}
+
+.card {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    header h1, #hero h2, #about h2 {
+        font-size: 1.5em;
+    }
+
+    #hero p, #about p {
+        font-size: 1em;
+    }
+
+    form label, form input, form button {
+        font-size: 0.9em;
+    }
+
+    form input {
+        width: 80%;
+    }
+}
