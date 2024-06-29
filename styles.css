@@ -45,6 +45,7 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     width: 100%;
+    margin-top: 20px; /* Adjust spacing below fixed header */
 }
 
 #hero h2 {
@@ -94,6 +95,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
+    padding: 20px; /* Add padding to the card grid */
 }
 
 .profile-card {
@@ -125,19 +127,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header h1, #hero h2, #about h2 {
-        font-size: 1.5em;
+    header {
+        position: static; /* Change header to static for mobile view */
     }
 
-    #hero p, #about p {
-        font-size: 1em;
+    main {
+        padding-top: 80px; /* Reduce padding-top for mobile view */
     }
 
-    form label, form input, form button {
-        font-size: 0.9em;
-    }
-
-    form input {
-        width: 80%;
+    .card-grid {
+        padding: 10px; /* Adjust padding to create more uniform spacing */
     }
 }
